@@ -1,7 +1,7 @@
 # Require TF version to be same as or greater than 0.12.16
 terraform {
   required_version = ">=0.12.16"
-/*
+  /*
   backend "s3" {
     bucket         = "kyler-codebuild-demo-terraform-tfstate"
     key            = "terraform.tfstate"
@@ -16,7 +16,7 @@ terraform {
 provider "aws" {
   region  = "us-east-1"
   version = "~> 2.36.0"
-/*
+  /*
   assume_role {
     # Remember to update this account ID to yours
     role_arn     = "arn:aws:iam::718626770228:role/TerraformAssumedIamRole"
@@ -40,7 +40,7 @@ module "bootstrap" {
 ## Build a CodeCommit git repo
 module "codecommit" {
   source          = "./modules/codecommit"
-  repository_name = "CodeCommitTerraform"
+  repository_name = "nguyenngocduy1981/aws-terraform-pipeline2"
 }
 
 ## Build CodeBuild projects for Terraform Plan and Terraform Apply
