@@ -40,7 +40,7 @@ module "bootstrap" {
 ## Build a CodeCommit git repo
 module "codecommit" {
   source          = "./modules/codecommit"
-  repository_name = "nguyenngocduy1981/aws-terraform-pipeline2"
+  repository_name = "aws-terraform-pipeline2"
 }
 
 ## Build CodeBuild projects for Terraform Plan and Terraform Apply
